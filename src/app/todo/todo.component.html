@@ -1,0 +1,20 @@
+<h4> Component Todo</h4>
+<p>Nous sommes le {{ today | date }}</p>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let todo of toDoList, let i = index">
+    <p>{{ todo | json }}</p>
+    <div [ngClass]="{'encours': todo.todoStatus, terminer: !todo.todoStatus}">
+    <a [href]="todo.todoImage">
+    <img [src]="todo.todoImage" alt="">
+  </a>
+    {{todo.todoName | uppercase }}
+    <button class="btn btn-primary" [disabled]="todo.todoStatus" (click)="onChangeStatus(i)"> En cours</button>
+    <button class="btn btn-success" [disabled]="!todo.todoStatus" (click)="onChangeStatus(i)"> Terminer</button>
+    <button class="btn btn-danger" *ngIf="!todo.isModif" (click)="onUpdated(i)"> Modifier</button>
+    <button class="btn btn-success" *ngIf="todo.isModif" (click)="onUpdated(i)"> Modification Termine</button>
+    <button class="btn btn-success"  (click)="onView(i)"> Voir Plus</button>
+    <input class="form-control" [(ngModel)] = "todo.todoName" *ngIf="todo.isModif">
+  </div>
+  </li>
+</ul>

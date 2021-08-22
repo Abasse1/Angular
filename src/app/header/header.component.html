@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" [routerLink]="['/home']" >LOGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/todos']" routerLinkActive="router-link-active" >Todo <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/contact']" routerLinkActive="router-link-active" >Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/add-todo']" routerLinkActive="router-link-active">Ajouter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/users']" routerLinkActive="router-link-active">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/add-user']" routerLinkActive="router-link-active">Ajouter Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

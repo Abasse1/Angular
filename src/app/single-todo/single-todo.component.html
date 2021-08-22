@@ -1,0 +1,11 @@
+<p>single-todo works!</p>
+
+<div class="card" style="width: 18rem;" *ngIf="todo">
+  <img [src]="todo.todoImage" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">{{todo.todoName}}
+    </p>
+  </div>
+</div>
+<p *ngIf="!todo" class="text-danger">{{error}}</p>
+<button class="btn btn-info" type="button" [routerLink]="['/todos']" routerLinkActive="router-link-active" >Back</button>

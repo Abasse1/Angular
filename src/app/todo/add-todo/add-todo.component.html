@@ -1,0 +1,27 @@
+
+  <div class="row">
+    <h1 class="display-4 text-center">Ajouter une tache a realiser</h1>
+
+    <div class="col-6">
+      {{todo | json}}
+      <form action="">
+      <div class="form-group">
+        <label for="name">Nom Tache:</label>
+        <input type="text" class="form-control m-1" id="name" name="todoName" [(ngModel)]="todo.todoName" required/>
+      </div>
+      <div class="form-group">
+        <label for="url">Url Image:</label>
+        <input type="text" class="form-control m-1" id="url" name="todoImage" [(ngModel)]="todo.todoImage">
+      </div>
+      <div class="form-group">
+        <label for="etat">Etat Tache:</label>
+        <select name="" id="etat" class="form-control" name="todoStatus" [(ngModel)]="todo.todoStatus">
+          <option value="true">En Cours</option>
+          <option value="false">Terminee</option>
+        </select>
+      </div>
+      <button class="btn btn-success btn-lg" type="button" (click)="onSubmit(todo)">Ajouter</button>
+      </form>
+    </div>
+  </div>
+
